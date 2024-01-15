@@ -1,0 +1,626 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    /* Set your desired background color */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+/* top navigation bar  */
+.sidenav {
+    position: fixed;
+    padding-top: 30px;
+}
+
+.sidenav a {
+    text-transform: uppercase;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000;
+    display: inline-block;
+    margin: auto 40px auto 20px;
+}
+
+.sidenav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* Adjust the thickness of the underline */
+    background-color: #000000;
+    /* Set your desired color for the underline */
+    transform: scaleX(0);
+    /* Initially, the underline is not visible */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+    /* Transition for the underline appearance */
+}
+
+.sidenav a:hover::before {
+    transform: scaleX(1);
+    /* Scale the underline to full width on hover */
+    transform-origin: bottom left;
+}
+
+.sidenav a:hover {
+    border-bottom: 1px solid #000000;
+}
+
+.sidenav {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.logo h2 {
+    margin-top: 70px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 1.5s steps(30) forwards, blink-caret 0.5s step-end infinite;
+
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    /* Adjust the height of your logo or icon */
+    margin: 50px 30px auto 50px;
+    /* Add space between the text and logo */
+}
+
+/* social media links side bar */
+.social-media {
+    width: 70px;
+    position: fixed;
+    z-index: 1;
+    top: 240px;
+    left: 5px;
+    background: #ffffff;
+    padding: 8px 0;
+    transition: opacity 1s ease;
+}
+
+.social-media a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 10px auto;
+    display: block;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.social-media a:hover {
+    border-radius: 5%;
+    background-color: #c9c9c9;
+}
+
+#home {
+    margin-left: 140px;
+    /* Same width as the sidebar + left position in px */
+    font-size: 28px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .social-media {
+        padding-top: 15px;
+    }
+
+    .social-media a {
+        font-size: 18px;
+    }
+}
+
+/* fadin animation on HEET BODA */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-right-color: transparent;
+    }
+
+    50% {
+        border-right-color: black;
+        /* Set your desired caret color */
+    }
+}
+
+.social-icons {
+    width: 40px;
+    height: 40px;
+}
+
+/* home page contents */
+#box1 {
+    text-align: center;
+    height: 900px;
+    background: linear-gradient(to right, rgba(245, 245, 245, .8), rgba(245, 245, 245, .8)), url('https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg');
+    ;
+    background-size: cover;
+}
+
+.iamheet {
+    padding-top: 10rem;
+    margin-right: 2rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+}
+
+.intro {
+    margin: 2rem auto;
+    margin-left: 7rem;
+    width: 70%;
+    font-family: 'Noto Sans', sans-serif;
+    color: rgb(82 67 67);
+}
+
+.projects {
+    text-decoration: none;
+    background: #7843e9;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    padding: 1rem 4rem;
+    margin: 2rem 4em 2rem 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    letter-spacing: 3px;
+    box-shadow: 5px 5px 2.5px #171717;
+}
+
+.projects:hover {
+    transform: scale(1.1);
+}
+
+.scroll {
+    width: 45px;
+    height: 45px;
+    margin-top: 10rem;
+}
+
+
+/* BOX2 */
+
+#box2 {
+    text-align: center;
+    padding: 6rem 5rem;
+    background-color: whitesmoke;
+}
+
+.about-me {
+    margin: 2rem auto 0.9rem auto;
+    font-size: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+}
+
+.purple-hr {
+    width: 3%;
+    border: 2px solid #7843e9;
+    background-color: #7843e9;
+    border-radius: 10px;
+    height: 2px
+}
+
+.about-intro {
+    width: 60%;
+    margin: 2rem auto;
+    font-size: 25px;
+    margin-bottom: 5rem;
+    color: rgb(78, 78, 78);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about-table {
+    text-align: left;
+}
+
+.about-td {
+    padding: 10px;
+    width: 40%;
+    margin: 10px;
+}
+
+.about-th {
+    width: 40%;
+    padding: 10px;
+    font-size: 1.7rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.skills {
+    display: inline-block;
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    bottom: 140px;
+    background-color: rgba(153, 153, 153, .2);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 10px;
+}
+
+.know-para {
+    margin: 15px 20px 15px 0;
+    width: 90%;
+    line-height: 35px;
+    font-size: 1.1rem;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(78, 78, 78);
+}
+
+.contact-btn {
+    background: #7843e9;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    padding: 1rem 4rem;
+    margin: 3rem 0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    letter-spacing: 3px;
+    box-shadow: 2px 2px 1px #171717;
+}
+
+button.contact-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* Box 3 */
+#box3 {
+    text-align: center;
+    padding: 6rem 5rem;
+    background-color: whitesmoke;
+}
+
+.project {
+    margin: 2rem auto 0.9rem auto;
+    font-size: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+}
+
+.projects-intro {
+    width: 60%;
+    margin: 2rem auto;
+    font-size: 25px;
+    margin-bottom: 5rem;
+    color: rgb(78, 78, 78);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+table.project-table {
+    text-align: left;
+
+}
+
+.project-row {
+    margin-bottom: 200px;
+}
+
+.laptop-img1 {
+    width: 850px;
+    height: 850px;
+    /* position: absolute;
+    bottom: -330px;
+    left: -35px;
+    z-index: 1; */
+}
+
+.laptop-img2 {
+    width: 850px;
+    height: 850px;
+    /* position: absolute;
+    bottom: -330px;
+    left: -35px;
+    z-index: 1; */
+}
+
+.blog-screenshot {
+    /* position: absolute;
+    top: 26px;
+    left: 80px; */
+    width: 620.5px;
+    height: 388px;
+    /* z-index: 2; */
+}
+
+.know-more {
+    text-decoration: none;
+    background: #7843e9;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    bottom: 3rem;
+    font-size: 0.7rem;
+    padding: 1rem 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    letter-spacing: 3px;
+    box-shadow: 1px 1px 1px #171717;
+}
+
+.know-more:hover {
+    transform: scale(1.1);
+}
+
+/* Carousel */
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-item {
+    width: 100%;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #bebebe;
+}
+
+.prev {
+    left: 1px;
+}
+
+.next {
+    right: 3px;
+}
+
+/* contact me  */
+#box4 {
+    text-align: center;
+    padding: 6rem 5rem;
+    background-color: #ebebeb;
+}
+
+.contact {
+    margin: 2rem auto 0.9rem auto;
+    font-size: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+}
+
+.contact-intro {
+    width: 60%;
+    margin: 2rem auto;
+    font-size: 25px;
+    margin-bottom: 5rem;
+    color: rgb(78, 78, 78);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.form-container {
+    color: #666;
+    width: 70%;
+    margin: auto;
+    padding: 50px;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(109, 109, 110, 0.2) 0 7px 29px 0;
+}
+
+input {
+    display: block;
+    color: #333;
+    width: 90%;
+    border: 1px solid white;
+    background-color: #f0f0f0;
+    border-radius: 7px;
+    padding: 20px;
+    margin: 1rem 0;
+}
+
+.submit {
+    background: #7843e9;
+    font-family: 'Open Sans', sans-serif;
+    /* margin-top: 2rem; */
+    font-size: 0.8rem;
+    padding: 1rem 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    letter-spacing: 3px;
+    box-shadow: 1px 1px 1px #171717;
+}
+
+.submit:hover {
+    transform: scale(1.1)
+}
+
+/* footer  */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+
+.footer-table {
+    width: 90%;
+    margin: 5rem auto;
+}
+
+.footer-td {
+    text-align: left;
+}
+
+.text {
+    padding: 1rem 19rem 1rem 0;
+    width: 80%;
+}
+
+.icon {
+    text-align: right;
+}
+
+.footer-th {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.footer-socials {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+    margin: 5px;
+}
+
+footer p {
+    position: relative;
+    top: 50px;
+}
+
+footer hr {
+    border: 1px solid rgb(91, 91, 91);
+}
+
+footer p a {
+    text-decoration: underline;
+    color: white;
+}
+
+
+
+/* QUIZ PROJECT */
+.project-container {
+    /* text-align: center; */
+    width: 70%;
+    margin: 5rem auto;
+}
+
+.project-details {
+    margin: 2rem auto;
+}
+
+.content {
+    padding: 2rem;
+}
+
+
+.project-container img {
+    width: 100%;
+}
+
+.project-details h2 {
+    margin: 3rem auto;
+}
+
+.desc-para {
+    width: 90%;
+    color: #666;
+}
+
+.project-skills {
+    background-color: rgba(153, 153, 153, .2);
+    color: #666;
+    padding: 1rem;
+    display: inline-block;
+    margin: auto 1rem;
+    border-radius: 10px;
+}
+
+.go-back {
+    background-color: white;
+    border: 2px solid #7843e9;
+    color: black;
+    margin: 1.5rem 1.5rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.go-back:hover {
+    transform: scale(1.1)
+}
